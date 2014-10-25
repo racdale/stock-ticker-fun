@@ -7,6 +7,7 @@ $m = date("n")-1; # Yahoo ichart requires month - 1
 $d = date("d"); # fields spec'ed here:
 # http://stackoverflow.com/questions/754593/source-of-historical-stock-data
 
+# get this on nasdaq's FTP: ftp://ftp.nasdaqtrader.com/SymbolDirectory/
 $tickers = explode("\n",file_get_contents("nasdaqlisted.txt"));
 
 foreach ($tickers as $tick) {
